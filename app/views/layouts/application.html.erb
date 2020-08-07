@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simpleblog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <!-- I still do not have a working home or creat post button-->
+      <nav class="nav navbar-dault">
+        <div class="container">
+          <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+           data-target="#navbar" aria-expanded="false" aria-controls="navbar"-->
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class = "navbar-brand" href="#">Simpleblog</a> 
+        </div>
+        <div id='nabar' class="collapse navbar-collapse">
+        <ul class= "nav navbar-nav">
+          <li><%= link_to "Home", home_path %></li>
+        </ul>
+        <ul class= "nav navbar-nav navbar-right">
+          <li><%= link_to "Create Post", new_post_path %></li>
+        </ul>
+        </div> 
+      </nav>
+
+  <div class='container'>
+    <%= yield %>
+  </div>
+</body>
+</html>
